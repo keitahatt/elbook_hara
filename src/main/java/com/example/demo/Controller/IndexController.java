@@ -16,7 +16,7 @@ public class IndexController {
 
 	@GetMapping
 	public String index(@AuthenticationPrincipal CustomDetails user_role, Model model) {
-		model.addAttribute("BookList", bookService.findBook());
+		//model.addAttribute("BookList", bookService.findBook());
 		return "booklist";
 	}
 
