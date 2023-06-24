@@ -3,6 +3,7 @@ package com.example.demo.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.Entity.BookList;
 import com.example.demo.Mapper.BookMapper;
 
 @Service
@@ -23,9 +24,9 @@ public class BookService {
 //		return bookMapper.targetBook(book_id);
 //	}
 //
-//	public void createBook(BookList bookList) {
-//		bookMapper.createBook(bookList);
-//	}
+	public void createBook(BookList bookList) {
+		bookMapper.createBook(bookList);
+	}
 //
 //	public void editBook(BookList bookList) {
 //		bookMapper.editBook(bookList);
@@ -35,9 +36,9 @@ public class BookService {
 //		bookMapper.deleteBook(book_id);
 //	}
 //
-//	public int getMaxNumberBook() {
-//		return bookMapper.getMaxNumberBook();
-//	}
+	public int getMaxNumberBook() {
+		return bookMapper.getMaxNumberBook();
+	}
 //
 //	public void rentalBook(int book_id) {
 //		bookMapper.rentalBook(book_id);
