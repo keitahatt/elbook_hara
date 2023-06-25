@@ -14,4 +14,10 @@ public interface UserMapper {
 	void editUser(UserList userList);
 
 	List<UserList> findUser();
+	
+	void createUser(UserList userList);
+	
+	UserList targetUser(int user_id);
+	
+	void deleteUser(int userList);
 }
