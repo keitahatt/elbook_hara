@@ -47,8 +47,8 @@ public class BookService {
 
 	}
 //
-//	public void returnBook(int book_id) {
-//		bookMapper.returnBook(book_id);
-//	}
+	public void returnBook(int book_id) {
+		bookMapper.returnBook(book_id);
+	}
 
 }

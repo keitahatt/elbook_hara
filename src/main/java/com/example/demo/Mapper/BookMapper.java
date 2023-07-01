@@ -25,6 +25,8 @@ public interface BookMapper {
 	
 	void rentalBook(int book_id);
 	
+	void returnBook(int book_id);
+	
 //	List<BookList> getBookList();
 //
 

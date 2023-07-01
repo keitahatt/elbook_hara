@@ -35,15 +35,30 @@ public class RentalController {
 		
 	}
 	
+	//レンタル機能貸し出し処理
 	@PostMapping("/{book_id}")
 	public String rentalBook(
 			@AuthenticationPrincipal CustomDetails user_info,
+			//@PathVariableはSpring Frameworkにおけるアノテーションの1つで、URLパス内の変数値をメソッドの引数にバインドするために使用される
 			@PathVariable int book_id) {
 		int rental_key_id = user_info.getUserList().getUser_id();
 		
 		rentalService.rentalBook(rental_key_id, book_id);
 		bookService.rentalBook(book_id);
-				return null;
+		return "redirect:/book/list";
+		
+	}
+	
+	//レンタル機能返却処理
+	@GetMapping("/return/{book_id}")
+	public String returnBook(
+			@AuthenticationPrincipal CustomDetails user_info,
+			@PathVariable int book_id) {
+		int rental_key_id = user_info.getUserList().getUser_id();
+		
+		rentalService.returnBook(rental_key_id, book_id);
+		bookService.returnBook(book_id);
+		return "redirect:/rental/rentalview";
 		
 	}
 	

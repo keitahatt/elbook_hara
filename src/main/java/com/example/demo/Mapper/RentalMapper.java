@@ -10,9 +10,9 @@ import com.example.demo.Entity.Rental;
 public interface RentalMapper {
 
 //
-//	void rentalBook(int rental_key_id, int book_id);
+	void rentalBook(int rental_key_id, int book_id);
 //
-//	void returnBook(int rental_key_id, int book_id);
+	void returnBook(int rental_key_id, int book_id);
 //
 	List<Rental> findRentalBook(int rental_key_id);
 //	
